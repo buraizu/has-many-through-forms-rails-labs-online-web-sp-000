@@ -16,6 +16,10 @@
   <% users = @post.comments.collect { |c| c.user_id } %>
 
   <% users.uniq.each do |user| %>
+<<<<<<< HEAD
     <li><%= User.find(user).username %></li>
+=======
+    <li><%= link_to User.find(user).username, user_path(user) %></li>
+>>>>>>> 4631a50ff81c483a0518aa0701f9447d6155817b
   <% end %>
 </ul>
